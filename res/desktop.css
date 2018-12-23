@@ -1,0 +1,59 @@
+header {
+    padding-left: 15%;
+}
+header div {
+    margin-right: 15%;
+}
+ul {
+    max-width: 60rem;
+    margin: auto;
+    text-align: center;
+}
+ul li {
+    display: inline-block;
+    padding: 2rem;
+    width: 10rem;
+    text-align: center;
+    margin: 0.5rem;
+}
+ul li b {
+    margin: 0;
+    padding: 2rem;
+    font-size: 4rem;
+}
+ul li a {
+    display: block;
+    margin: 0;
+    margin-top: 0.3rem;
+    height: 1.6rem;
+    overflow: hidden;
+}
+ul li span {
+    left: 0.7rem;
+    padding: 0.1rem;
+    bottom: 0.5rem;
+}
+ul li span button {
+    float: left;
+    opacity: 0.5;
+}
+ul li span button:last-of-type {
+    float: right;
+}
+ul li span button:hover {
+    opacity: 0.8;
+}
+#addbox div form input {
+    padding: 0.8rem 2.4rem;
+    margin: 0.5rem;
+    font-size: 1rem;
+    min-width: 260px;
+    border-radius: 0.8rem;
+}
+#addbox div form button {
+    padding: 0.7rem 1.5rem;
+    border-radius: 1.5rem 0 0 1.5rem;
+}
+#addbox div form button:last-of-type {
+    border-radius: 0 1.5rem 1.5rem 0;
+}
