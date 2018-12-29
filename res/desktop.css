@@ -1,46 +1,55 @@
 header {
-    padding-left: 15%;
+    padding-left: 10%;
 }
 header div {
-    margin-right: 15%;
+    margin-right: 10%;
 }
-ul {
+main div fieldset {
+    margin: 0 10%;
+}
+main div fieldset input {
+    padding: 0.9rem 10%;
+}
+main div fieldset button {
+    margin-right: 10%;
+}
+main ul {
     max-width: 60rem;
     margin: auto;
     text-align: center;
 }
-ul li {
+main ul li {
     display: inline-block;
     padding: 2rem;
     width: 10rem;
     text-align: center;
     margin: 0.5rem;
 }
-ul li b {
+main ul li b {
     margin: 0;
     padding: 2rem;
     font-size: 4rem;
 }
-ul li a {
+main ul li a {
     display: block;
     margin: 0;
     margin-top: 0.3rem;
     height: 1.6rem;
     overflow: hidden;
 }
-ul li span {
+main ul li span {
     left: 0.7rem;
     padding: 0.1rem;
     bottom: 0.5rem;
 }
-ul li span button {
+main ul li span button {
     float: left;
     opacity: 0.5;
 }
-ul li span button:last-of-type {
+main ul li span button:last-of-type {
     float: right;
 }
-ul li span button:hover {
+main ul li span button:hover {
     opacity: 0.8;
 }
 #addbox div form input {

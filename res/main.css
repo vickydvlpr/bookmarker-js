@@ -8,7 +8,7 @@ a {
 a:link, a:hover, a:visited {
     color: inherit;
 }
-button , input {
+button, input, fieldset {
     background: none;
     border: none;
     outline: none;
@@ -21,19 +21,19 @@ button:active, input:active {
 }
 body {
     padding-top: 4rem;
-    background: rgb(14, 15, 21);
+    background: rgba(14, 15, 21);
     color: #dddddd;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 /* Styling our header */
 header {
+    background: #39255a;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background: rgb(26, 30, 44);
-    color: #f3f3f3;
+    color: #eeeeee;
     padding: 1rem;
     padding-right: 5rem;
     -webkit-user-select: none;
@@ -57,7 +57,6 @@ header div {
     padding: 0.3rem;
 }
 header div button {
-    background: rgb(23, 25, 34);;
     height: 2.5rem;
     width: 2.5rem;
     position: relative;
@@ -74,8 +73,8 @@ header div button svg {
     transform: translate(-50%, -50%);
 }
 header div button:hover {
+    background: rgb(23, 25, 34);
     cursor: pointer;
-    background: #462d6e;
 }
 .closebox {
     transform: rotate(135deg);
@@ -89,13 +88,13 @@ header div button:hover {
     opacity: 0;
     height: 100vh;
     width: 100%;
-    background: rgba(14, 15, 21, 0.9);
+    background: rgba(14, 15, 21, 0.952);
     transition: 400ms top, 400ms opacity;
 }
 #addbox.addbox {
     top: 0;
     opacity: 1;
-} 
+}
 #addbox div {
     position: absolute;
     top: 50%;
@@ -103,20 +102,12 @@ header div button:hover {
     transform: translate(-50%, -50%);
     padding-top:2rem;
 }
+#addbox div span {
+    display: block;
+    text-align: center;
+}
 #addbox div form {
     max-width: 38rem;
-}
-#addbox div form label {
-    display: block;
-    padding: 0.4rem 1rem;
-    margin: 1rem;
-    background: rgb(19, 21, 39);
-    margin-top: -2.3rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 0.7rem;
-    border-radius: 0 0 1rem 1rem;
-    color: #6b6b6b;
-    transition: margin 300ms ease;
 }
 #addbox div form input:focus + label {
     margin-top: -0.7rem;
@@ -124,9 +115,9 @@ header div button:hover {
 #addbox div form input {
     display: block;
     padding: 0.7rem 2rem;
-    background: rgb(27, 28, 36);
+    background: #39255a;
     margin: 0.5rem;
-    color: #f5f5f5;
+    color: #f0f0f0;
     font-size: 0.9rem;
     min-width: 200px;
     border-radius: 0.5rem;
@@ -166,14 +157,52 @@ header div button:hover {
     cursor: pointer;
     opacity: 0.8;
 }
+main div {
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 0;
+    transition: 300ms height ease;
+    background: #311f4d;
+}
+main div fieldset {
+    position: relative;
+}
+main div fieldset input {
+    box-sizing: border-box;
+    padding: 0.9rem 1.5rem;
+    padding-right: 3.5rem;
+    color: #efefef;
+    width: 100%;
+    font-size: 1em;
+}
+main div fieldset button {
+    position: absolute;
+    top: 0.7rem;
+    right: 1.5rem;
+    padding: 0.4rem;
+    line-height: 0.7rem;
+    border-radius: 50%;
+}
+main div fieldset button:hover {
+    background: #a50000;
+    cursor: pointer;
+}
+main div button svg {
+    fill: rgb(207, 207, 207);
+    height: 1em;
+    width: 1em;
+}
+main div.show {
+    height: 3em;
+}
 
 /* Bookmark list design */
-ul {
+main ul {
     padding: 1rem;
     list-style: none;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-ul li {
+main ul li {
     padding: 0.5rem;
     background: rgb(27, 28, 36);
     border-radius: 5px;
@@ -184,14 +213,14 @@ ul li {
     position: relative;
     padding-right: 4rem;
 }
-ul li b {
+main ul li b {
     display: inline-block;
     width: 2.3rem;
     height: 2.3rem;
     font-size: 1.7rem;
     line-height: 2.3rem;
     font-weight: normal;
-    background: rgb(45, 48, 61);
+    background: rgba(45, 48, 61, 0.534);
     text-align: center;
     border-radius: 50%;
     cursor: pointer;
@@ -201,10 +230,10 @@ ul li b {
     user-select: none;
     font-family: 'Courier New', Courier, monospace;
 }
-ul li a {
+main ul li a {
     margin-left: 1rem;
 }
-ul li span {
+main ul li span {
     display: block;
     position: absolute;
     right: 0.7rem;
@@ -214,17 +243,17 @@ ul li span {
     -ms-user-select: none;
     user-select: none;
 }
-ul li span button {
+main ul li span button {
     padding: 0.3rem;
     background: none;
     height: 2rem;
 }
-ul li span button:hover {
+main ul li span button:hover {
     cursor: pointer;
     background: rgb(45, 48, 61);
     border-radius: 0.25rem;
 }
-ul li span button svg {
+main ul li span button svg {
     display: flex;
     width: 0.9rem;
     height: 0.9rem;
