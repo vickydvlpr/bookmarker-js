@@ -89,7 +89,7 @@ header div button:hover {
     height: 100vh;
     width: 100%;
     background: rgba(14, 15, 21, 0.952);
-    transition: 400ms top, 400ms opacity;
+    transition: 600ms top, 400ms opacity;
 }
 #addbox.addbox {
     top: 0;
@@ -102,15 +102,18 @@ header div button:hover {
     transform: translate(-50%, -50%);
     padding-top:2rem;
 }
-#addbox div span {
+#addbox div > span {
     display: block;
     text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+#addbox div > span svg {
+    position: relative;
+    bottom: -0.3rem;
 }
 #addbox div form {
     max-width: 38rem;
-}
-#addbox div form input:focus + label {
-    margin-top: -0.7rem;
 }
 #addbox div form input {
     display: block;
@@ -282,7 +285,6 @@ main ul li span button svg {
     display: block;
     opacity: 1;
 }
-
 /* Message Box Design */
 #msg {
     background: rgba(0, 33, 143, 0.596);
