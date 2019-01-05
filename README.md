@@ -10,7 +10,7 @@ Bookmarker Tool with JS and HTML5 Local Storage
 5. Store is JSON format
 
 ## Screenshots
-![Screenshot 1](screenshots/screenshot_1.png) ![Screenshot 2](screenshots/screenshot_2.png) ![Screenshot 3](screenshots/screenshot_3.png) ![Screenshot 4](screenshots/screenshot_4 .png)
+![Screenshot 1](screenshots/screenshot_1.png) ![Screenshot 2](screenshots/screenshot_2.png) ![Screenshot 3](screenshots/screenshot_3.png) ![Screenshot 4](screenshots/screenshot_4.png)
 
 
 ## Support
