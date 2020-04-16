@@ -1,314 +1,337 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
-a:link, a:hover, a:visited {
-    color: inherit;
+a:link,
+a:hover,
+a:visited {
+  color: inherit;
 }
-button, input, fieldset {
-    background: none;
-    border: none;
-    outline: none;
-    appearance: none;
+button,
+input,
+fieldset {
+  background: none;
+  border: none;
+  outline: none;
+  appearance: none;
 }
-button:active, input:active {
-    border: none;
-    outline: none;
-    appearance: none;
+button:active,
+input:active {
+  border: none;
+  outline: none;
+  appearance: none;
 }
 body {
-    padding-top: 4rem;
-    background: rgba(14, 15, 21);
-    color: #dddddd;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding-top: 4rem;
+  background: rgba(14, 15, 21);
+  color: #dddddd;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 /* Styling our header */
 header {
-    background: #39255a;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    color: #eeeeee;
-    padding: 1rem;
-    padding-right: 5rem;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    z-index: 10;
+  background: #39255a;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: #eeeeee;
+  padding: 1rem;
+  padding-right: 5rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 10;
 }
 header h1 {
-    display: inline-block;
-    font-weight: normal;
-    margin-left: 0.3rem;
-    font-size: 1.8rem;
+  display: inline-block;
+  font-weight: normal;
+  margin-left: 0.3rem;
+  font-size: 1.8rem;
 }
 header div {
-    position: absolute;
-    right: 0;
-    top: 0;
-    margin-top: 0.5rem;
-    margin-right: 1rem;
-    padding: 0.3rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+  padding: 0.3rem;
 }
 header div button {
-    height: 2.5rem;
-    width: 2.5rem;
-    position: relative;
-    border-radius: 50%;
-    transition: 100ms background ease, 200ms transform ease;
+  height: 2.5rem;
+  width: 2.5rem;
+  position: relative;
+  border-radius: 50%;
+  transition: 100ms background ease, 200ms transform ease;
 }
 header div button svg {
-    fill: #f0f0f0;
-    height: 1.2rem;
-    width: 1.2rem;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+  fill: #f0f0f0;
+  height: 1.2rem;
+  width: 1.2rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 header div button:hover {
-    background: rgb(23, 25, 34);
-    cursor: pointer;
+  background: rgb(23, 25, 34);
+  cursor: pointer;
 }
 .closebox {
-    transform: rotate(135deg);
-    background: rgb(129, 5, 5);
+  transform: rotate(135deg);
+  background: rgb(129, 5, 5);
 }
 /* Add Bookmark Box Design */
-#addbox {
-    position: fixed;
-    top: -100%;
-    left: 0;
-    opacity: 0;
-    height: 100vh;
-    width: 100%;
-    background: rgba(14, 15, 21, 0.952);
-    transition: 600ms top, 400ms opacity;
+#addbox,
+#editbox {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  opacity: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgba(14, 15, 21, 0.952);
+  transition: 600ms top, 400ms opacity;
 }
-#addbox.addbox {
-    top: 0;
-    opacity: 1;
+#addbox.addbox,
+#editbox.editbox {
+  top: 0;
+  opacity: 1;
 }
-#addbox div {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding-top:2rem;
+#addbox div,
+#editbox div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-top: 2rem;
 }
-#addbox div > span {
-    display: block;
-    text-align: center;
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
+#addbox div > span,
+#editbox div > span {
+  display: block;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
-#addbox div > span svg {
-    position: relative;
-    bottom: -0.3rem;
+#addbox div > span svg,
+#editbox div > span svg {
+  position: relative;
+  bottom: -0.3rem;
 }
-#addbox div form {
-    max-width: 38rem;
+#addbox div form,
+#editbox div form {
+  max-width: 38rem;
 }
-#addbox div form input {
-    display: block;
-    padding: 0.7rem 2rem;
-    background: #39255a;
-    margin: 0.5rem;
-    color: #f0f0f0;
-    font-size: 0.9rem;
-    min-width: 200px;
-    border-radius: 0.5rem;
-    position: relative;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+#addbox div form input,
+#editbox div form input {
+  display: block;
+  padding: 0.7rem 2rem;
+  background: #39255a;
+  margin: 0.5rem;
+  color: #f0f0f0;
+  font-size: 0.9rem;
+  min-width: 200px;
+  border-radius: 0.5rem;
+  position: relative;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-#addbox div form input::placeholder {
-    opacity: 0.6;
+#addbox div form input::placeholder,
+#editbox div form input::placeholder {
+  opacity: 0.6;
 }
-#addbox div form span {
-    display: block;
-    text-align: center;
+#addbox div form span,
+#editbox div form span {
+  display: block;
+  text-align: center;
 }
-#addbox div form button {
-    display: inline-block;
-    min-width: 5rem;
-    padding: 0.6rem 1.5rem;
-    border: none;
-    margin: 0;
-    color: #f5f5f5;
-    background: rgb(5, 129, 42);
-    border-radius: 1rem 0 0 1rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+#addbox div form button,
+#editbox div form button {
+  display: inline-block;
+  min-width: 5rem;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  margin: 0;
+  color: #f5f5f5;
+  background: rgb(5, 129, 42);
+  border-radius: 1rem 0 0 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-#addbox div form button:last-of-type {
-    background: rgb(129, 5, 5);
-    border-radius:0 1rem 1rem 0;
+#addbox div form button:last-of-type,
+#editbox div form button:last-of-type {
+  background: rgb(129, 5, 5);
+  border-radius: 0 1rem 1rem 0;
 }
-#addbox div form button svg {
-    float: right;
-    margin-left: 0.5rem;
-    height: 0.9rem;
-    width: 0.9rem;
-    fill: #f5f5f5;
+#addbox div form button svg,
+#editbox div form button svg {
+  float: right;
+  margin-left: 0.5rem;
+  height: 0.9rem;
+  width: 0.9rem;
+  fill: #f5f5f5;
 }
-#addbox div form button:hover {
-    cursor: pointer;
-    opacity: 0.8;
+#addbox div form button:hover,
+#editbox div form button:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
 main div {
-    box-sizing: border-box;
-    overflow: hidden;
-    height: 0;
-    transition: 300ms height ease;
-    background: #311f4d;
+  box-sizing: border-box;
+  overflow: hidden;
+  height: 0;
+  transition: 300ms height ease;
+  background: #311f4d;
 }
 main div fieldset {
-    position: relative;
+  position: relative;
 }
 main div fieldset input {
-    box-sizing: border-box;
-    padding: 0.9rem 1.5rem;
-    padding-right: 3.5rem;
-    color: #efefef;
-    width: 100%;
-    font-size: 1em;
+  box-sizing: border-box;
+  padding: 0.9rem 1.5rem;
+  padding-right: 3.5rem;
+  color: #efefef;
+  width: 100%;
+  font-size: 1em;
 }
 main div fieldset button {
-    position: absolute;
-    top: 0.7rem;
-    right: 1.5rem;
-    padding: 0.4rem;
-    line-height: 0.7rem;
-    border-radius: 50%;
+  position: absolute;
+  top: 0.7rem;
+  right: 1.5rem;
+  padding: 0.4rem;
+  line-height: 0.7rem;
+  border-radius: 50%;
 }
 main div fieldset button:hover {
-    background: #a50000;
-    cursor: pointer;
+  background: #a50000;
+  cursor: pointer;
 }
 main div button svg {
-    fill: rgb(207, 207, 207);
-    height: 1em;
-    width: 1em;
+  fill: rgb(207, 207, 207);
+  height: 1em;
+  width: 1em;
 }
 main div.show {
-    height: 3em;
+  height: 3em;
 }
 
 /* Bookmark list design */
 main ul {
-    padding: 1rem;
-    list-style: none;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 1rem;
+  list-style: none;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 main ul li {
-    padding: 0.5rem;
-    background: rgb(27, 28, 36);
-    border-radius: 5px;
-    margin: 0.1rem;
-    margin-bottom: 0.6rem;
-    display: flex;
-    align-items: center;
-    position: relative;
-    padding-right: 4rem;
+  padding: 0.5rem;
+  background: rgb(27, 28, 36);
+  border-radius: 5px;
+  margin: 0.1rem;
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-right: 4rem;
 }
 main ul li b {
-    display: inline-block;
-    width: 2.3rem;
-    height: 2.3rem;
-    font-size: 1.7rem;
-    line-height: 2.3rem;
-    font-weight: normal;
-    background: rgba(45, 48, 61, 0.534);
-    text-align: center;
-    border-radius: 50%;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-    font-family: 'Courier New', Courier, monospace;
+  display: inline-block;
+  width: 2.3rem;
+  height: 2.3rem;
+  font-size: 1.7rem;
+  line-height: 2.3rem;
+  font-weight: normal;
+  background: rgba(45, 48, 61, 0.534);
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  font-family: "Courier New", Courier, monospace;
 }
 main ul li a {
-    margin-left: 1rem;
+  margin-left: 1rem;
+  user-select: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 main ul li span {
-    display: block;
-    position: absolute;
-    right: 0.7rem;
-    fill: #aaaaaa;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  display: block;
+  position: absolute;
+  right: 0.7rem;
+  fill: #aaaaaa;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 main ul li span button {
-    padding: 0.3rem;
-    background: none;
-    height: 2rem;
+  padding: 0.3rem;
+  background: none;
+  height: 2rem;
 }
 main ul li span button:hover {
-    cursor: pointer;
-    background: rgb(45, 48, 61);
-    border-radius: 0.25rem;
+  cursor: pointer;
+  background: rgb(45, 48, 61);
+  border-radius: 0.25rem;
 }
 main ul li span button svg {
-    display: flex;
-    width: 0.9rem;
-    height: 0.9rem;
+  display: flex;
+  width: 0.9rem;
+  height: 0.9rem;
 }
 
 /* No Bookmarks Bar*/
 #nobookmarks {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    display: none;
-    opacity: 0;
-    transition:200ms opacity ease;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: none;
+  opacity: 0;
+  transition: 200ms opacity ease;
 }
 #nobookmarks h4 {
-    font-weight: normal;
+  font-weight: normal;
 }
 #nobookmarks p {
-    font-size: 0.8rem;
-    margin-top: 0.5rem;
-    opacity: 0.9;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  opacity: 0.9;
 }
 #nobookmarks.show {
-    display: block;
-    opacity: 1;
+  display: block;
+  opacity: 1;
 }
 /* Message Box Design */
 #msg {
-    background: rgba(0, 33, 143, 0.596);
-    color: #dddddd;
-    position: fixed;
-    bottom: -4rem;
-    left: 50%;
-    transform: translate(-50%, 0);
-    text-align: center;
-    font-size: 0.8rem;
-    padding: 0.5rem 1rem;
-    border-radius: 1rem;
-    transition: 300ms bottom ease, 200ms opacity ease, background 0ms 300ms ease;
-    opacity: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: rgba(0, 33, 143, 0.596);
+  color: #dddddd;
+  position: fixed;
+  bottom: -4rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  transition: 300ms bottom ease, 200ms opacity ease, background 0ms 300ms ease;
+  opacity: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 #msg.success {
-    background: rgba(0, 221, 66, 0.6);
+  background: rgba(0, 221, 66, 0.6);
 }
 #msg.error {
-    background: rgba(146, 0, 0, 0.6);
+  background: rgba(146, 0, 0, 0.6);
 }
 #msg.show {
-    transition: 300ms bottom ease, 200ms opacity ease, background 0ms 0ms ease;
-    bottom: 1rem;
-    opacity: 1;
+  transition: 300ms bottom ease, 200ms opacity ease, background 0ms 0ms ease;
+  bottom: 1rem;
+  opacity: 1;
 }
