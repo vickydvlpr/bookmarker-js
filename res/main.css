@@ -96,7 +96,7 @@ header div button:hover {
   height: 100vh;
   width: 100%;
   background: rgba(14, 15, 21, 0.952);
-  transition: 600ms top, 400ms opacity;
+  transition: 300ms top, 200ms opacity;
 }
 #addbox.addbox,
 #editbox.editbox {
